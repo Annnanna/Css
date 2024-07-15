@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário</title>
+    <style>
+        
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: Arial, sans-serif;
+        }
+
+       
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #98d9ff; 
+            padding: 10px 20px;
+            border-bottom: 2px solid #00a2ff;
+        }
+
+        .header__title {
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .header__logout-button {
+            background-color: #00a2ff; 
+            border: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .header__logout-button:hover {
+            background-color: #3e92ff; 
+        }
+
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ffffff;
+            margin: 20px 0;
+        }
+
+        .profile__photo img {
+            border-radius: 50%;
+            width: 100px; 
+            height: 100px; 
+        }
+
+        .profile__info {
+            margin-left: 20px;
+        }
+
+        .profile__name {
+            font-size: 28px;
+            color: #000000;
+        }
+
+        .profile__description {
+            font-size: 16px;
+            color: #000000;
+        }
+
+       
+        .friends {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ffffff;
+            margin: 20px 0;
+        }
+
+        .friends__title {
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .friends__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .friends__item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        .friends__photo {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .friends__name {
+            font-size: 16px;
+            color: #000000;
+        }
+
+       
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #98d9ff; 
+            border-top: 2px solid #00a2ff;
+        }
+
+        .footer__link {
+            text-decoration: none;
+            color: #00a2ff;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer__link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">MeuSite</h1>
+        <button class="header__logout-button" onclick="handleLogout()">Logout</button>
+    </header>
+    
+    <section class="profile">
+        <div class="profile__photo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS08t3lZlT_JscMUhdU5tbWMj9vnLBm9K3yKA&s" alt="Foto do Usuário">
+        </div>
+        <div class="profile__info">
+            <h2 class="profile__name">Anna Clara</h2>
+            <p class="profile__description">Aqui vai uma breve descrição sobre o usuário.</p>
+        </div>
+    </section>
+    
+    <section class="friends">
+        <h2 class="friends__title">Lista de Amigos</h2>
+        <ul class="friends__list">
+            <li class="friends__item">
+                <img src="https://via.placeholder.com/50/ff9d9d/FFFFFF/?text=A1" alt="Foto do Amigo 1" class="friends__photo">
+                <span class="friends__name">Amigo 1</span>
+            </li>
+            <li class="friends__item">
+                <img src="https://via.placeholder.com/50/95ec9c/FFFFFF/?text=A2" alt="Foto do Amigo 2" class="friends__photo">
+                <span class="friends__name">Amigo 2</span>
+            </li>
+            <li class="friends__item">
+                <img src="https://via.placeholder.com/50/dda3ff/FFFFFF/?text=A3" alt="Foto do Amigo 3" class="friends__photo">
+                <span class="friends__name">Amigo 3</span>
+            </li>
+            <li class="friends__item">
+                <img src="https://via.placeholder.com/50/ffadff/FFFFFF/?text=A4" alt="Foto do Amigo 4" class="friends__photo">
+                <span class="friends__name">Amigo 4</span>
+            </li>
+            <li class="friends__item">
+                <img src="https://via.placeholder.com/50/80eee5/FFFFFF/?text=A5" alt="Foto do Amigo 5" class="friends__photo">
+                <span class="friends__name">Amigo 5</span>
+            </li>
+        </ul>
+    </section>
+    
+    <footer class="footer">
+        <a href="#" class="footer__link">Política de Privacidade</a>
+        <a href="#" class="footer__link">Termos de Uso</a>
+    </footer>
+
+    <script>
+        function handleLogout() {
+            if (confirm('Você tem certeza que deseja sair?')) {
+               
+                alert('Logout realizado com sucesso!');
+            }
+        }
+    </script>
+</body>
+</html>
